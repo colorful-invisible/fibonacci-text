@@ -1,0 +1,107 @@
+@font-face {
+  font-family: "Picnic";
+  src: url(./assets/fonts/picnic.woff2) format("woff2"),
+    url(./assets/fonts/picnic.woff) format("woff");
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Latitude";
+  src: url(./assets/fonts/latitude.woff2) format("opentype");
+  font-style: normal;
+  font-weight: 500;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --base-color: blue;
+}
+
+html {
+  font-size: 16px;
+  font-smooth: always;
+  background-color: var(--base-color);
+  scroll-behavior: smooth;
+  scrollbar-color: rgba(0, 0, 0, 0.35) rgba(0, 0, 0, 0);
+  scrollbar-width: thin;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 1200vh;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--base-color);
+  z-index: 9999;
+  opacity: 1;
+  mix-blend-mode: screen;
+}
+
+#container {
+  height: 100%;
+  width: 100%;
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  width: 100%;
+  height: 100vh;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+
+  z-index: 100;
+}
+
+.kalnia {
+  font-family: "Kalnia", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  letter-spacing: 5px;
+}
+
+.picnic {
+  font-family: "Picnic", sans-serif;
+}
+
+.latitude {
+  font-family: "Latitude", serif;
+}
+
+#wrapper p {
+  font-size: 3rem;
+  padding: 2rem 12rem;
+}
+
+.char {
+  transform-origin: center;
+  will-change: transform;
+}
+
+.word {
+  display: inline-block;
+  white-space: nowrap;
+}
