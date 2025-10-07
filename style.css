@@ -98,10 +98,12 @@ main {
 }
 
 .char {
+  --shadow-opacity: 0.85;
   transform-origin: center;
   will-change: transform;
-  text-shadow: 2px 2px 0 rgba(255, 0, 0, 0.9), 4px 6px 0 rgba(0, 255, 0, 0.7),
-    8px 12px 0 rgba(255, 0, 0, 0.7);
+  text-shadow: 5px 7px 0 rgba(255, 0, 0, var(--shadow-opacity)),
+    7px 13px 0 rgba(0, 255, 0, var(--shadow-opacity)),
+    13px 20px 0 rgba(255, 0, 0, var(--shadow-opacity));
 }
 
 .word {

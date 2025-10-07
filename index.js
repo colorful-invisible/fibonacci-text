@@ -63,5 +63,6 @@ chars.forEach((char, index) => {
     fontSize: originalFontSize,
     // fontWeight: originalFontWeight,
     color: "white",
+    // "--shadow-opacity": 0, // Animate shadow opacity from 0.85 to 0
   });
 });
